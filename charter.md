@@ -2,47 +2,33 @@
 
 ## Introduction
 
-Digital credentials based on IETF standards have use cases ranging from personal credentials, such as drivers licenses and vaccination proofs, to business-to-business or business-to-government applications.
-One example is fraud and counterfeiting prevention in cross-border trade documents by protecting digital representations of mill test reports, bills of materials, bills of lading, or commercial invoices.
-
-These scenarios were addressed with registered claim names in JOSE and COSE, but the resulting solutions have lead to fragmented approaches, where each working group rediscovers the essential architecture and conventions necessary for issuers to make claims about subjects.
-
-In order to meet privacy, security, and sustainability objectives, digital credentials need to be designed with awareness of computation and storage constraints associated with their use cases.
-The SPICE WG focuses on a few explicit higher level objectives: clear semantics, proof schemes supporting both traceability and unlinkability, data minimization and selective disclosure.
-
-These objectives can be achieved by leveraging industry adopted standards and managing trade-offs between cutting-edge and well-established cryptography.
-
-As a guiding principle for the SPICE WG, claims that work well in JSON must work well in CBOR, without loss of semantics. Compact expressions of claims consume less resources and expose less attack surface, these properties are in support sustainable design.
-
-The SPICE WG will support digital credential formats leveraging existing IETF standards and IANA registries, and create a framework for consistently extending them to support stakeholders that are building compliance and automation systems based on industry adopted cryptography and protocols.
-
-Digital credentials are identity documents with attributes (public or private claims in IANA registries) about the identity. The identifiers referenced could be about any subject, but common examples include people, devices, assets, organizations and processes.
+Digital credentials are essential to identity, access control, and digitization use cases that are part of modernization efforts, such as digital licenses or certificates of origin.
+COSE and JOSE provide building blocks, such as identifiers and public and private claim structures, which enable interoperability and cryptographic agility, but which require profiling to render digitization easy, unambiguous and consistent.
+There are various ways to combine identifiers, key material, signatures, and attributes to create credentials, which often prevents interoperabtility from spanning across data silos or cross use cases.
+This lack of interoperabilty leads to increased implementation costs, attack surface, and harms adoption, which prevents digitzation from being deployed successfully.
+SPICE aligns the capabilities of JOSE and COSE to support modern cryptographic capabilities, such as selective disclosure or unlinkablilty, consistent identity attribute semantics across representations, and Internet-scale discoverability of identifiers and cryptography capabilities.
 
 ## Background
 
-During the last few years there has been renewed interest in privacy-enhancing technologies for identity management systems that utilize technologies offering selective disclosure, data minimization and unlinkability.
+Foundational building blocks have been developed with BBS Signatures, RSA Blind Signatures, Verifiable Random Functions, or other Selective-Disclosure and data minimization techniques.
+While these techniques are being incorporated into JOSE and OAuth-based protocols, the integration into protocols using CBOR/COSE is, however, missing. 
+The SPICE WG aims to close this gap by enabling the secure and privacy-friendly use of CBOR-based credentials for use cases that go beyond constrained Internet of Things devices. Envisioned use cases where these credentials will be used include education, digital wallets, business-to-business supply chain interactions, and digital media.
 
-Foundational building blocks have been developed with BBS Signatures, RSA Blind Signatures, Verifiable Random Functions, and Selective-Disclosure techniques. 
-
-These technologies have subsequently been incorporated into JOSE and OAuth-based protocols. The integration into protocols using CWTs is, however, missing. 
-
-This working group aims to close this gap by enabling the secure and privacy-friendly use of CWT-based credentials for use cases that go beyond constrained Internet of Things devices. 
-
-Envisioned use cases where these credentials will be used include education, digital wallets, business-to-business supply chain interactions, and digital media.
-
-### A note on terminology
+### A note on terminology (Note: context to be removed from charter upon adoption)
 
 The term "digital credential" is a generic industry term, which does not imply a specific serialization. 
 
-The term "verifiable credential" is a term which can imply JSON, JSON-LD or mDoc serialization, and in the W3C, "verifiable credential" implies specific JSON-LD based media types.
+The term "verifiable credential" is a term which can imply, for example, JSON, JSON-LD or mDoc serialization.
 
-As this question is frequently asked, a "digital credential" is a "W3C Verifiable Credential" when it secures a JSON claimset that conforms to the W3C Technical Recommendation.
+In the W3C, "verifiable credential" implies specific JSON-LD based media types.
+
+A "digital credential" is a "W3C Verifiable Credential" when it secures a JSON claimset that conforms to the W3C Technical Recommendation.
 
 A "digital credential" is an "OAUTH Verifiable Credential" when it secures a JSON claimset that conforms to the requirements of documents developed by the OAUTH WG. 
 
 A "digital credential" might be a "mDoc verifiable credential", in other specifications.
 
-We avoid the term "verifiable credential" in this charter text, as we are not intending to draw exclusive association to these existing serializations.
+As a result, the SPICE WG avoids use the term "verifiable credential" in this charter text, as it is not intended to draw exclusive association to these existing serializations.
 
 ## Key Design Properties of Digital Credentials
 
