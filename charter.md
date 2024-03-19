@@ -20,11 +20,12 @@ These credentials, together with associated key material, can be stored in an id
 
 The SPICE WG will profile existing IETF technologies and address residual gaps that would enable their use in digital credentials and presentations.
 
-- The JOSE WG is already standardizing a token format for unlinkability & selective disclosure in the form of JWP/CWP (draft-ietf-jose-json-web-proof). The SPICE WG will profile these token formats for use with digital credentials. 
+- The JOSE WG is already standardizing a token format for selective disclosure in the form of JWP/CWP (draft-ietf-jose-json-web-proof). The SPICE WG will profile these token formats for use with digital credentials. 
 
 
-- The OAUTH WG is already standardizing a token format for unlinkability & selective disclosure in the form of SD-JWT/SD-JWT-VC (draft-ietf-oauth-selective-disclosure-jwt and draft-ietf-oauth-sd-jwt-vc). The SPICE WG will define SD-CWT/SD-CWT-VC, analogs for these JWT-based tokens but based on CWT. 
+- The OAUTH WG is already standardizing a token format for selective disclosure in the form of SD-JWT/SD-JWT-VC (draft-ietf-oauth-selective-disclosure-jwt and draft-ietf-oauth-sd-jwt-vc). The SPICE WG will define SD-CWT/SD-CWT-VC, analogs for these JWT-based tokens but based on CWT. 
 
+The SPICE WG will develop a selective disclosure mechanism with strong unlinkability properties.  The working group could define additional designs with other privacy properties.  Any privacy and security properties will be clearly articulated.
 
 The SPICE WG, coordinates with RATS, OAuth, JOSE, COSE and SCITT working groups that develop documents related to the identity and credential space. The SPICE WG builds on cryptographic primitives defined in the CFRG (e.g., BBS Signatures) and does not define novel cryptographic schemes.
 
@@ -36,8 +37,6 @@ Privacy by design, confidentiality, and consent will be considered, and guidance
 
 The privacy and security considerations related to the impact of confidential computing, remote attestation, and hardware security modules (HSM) on digital credentials will be developed in coordination with relevant IETF WGs, and feedback from experts on the mailing list.
 
-Privacy and security considerations regarding redaction, linkability and selective disclosure will be developed for proposed standards in the program of work that offer data minimization capabilities.
-
 ## Out of Scope
 
 *	General Key discovery is out of scope for this document, there are several mechanisms for distributing or discovering key material, for example https://openid.net/specs/openid-connect-discovery-1_0.html.
@@ -46,9 +45,9 @@ Privacy and security considerations regarding redaction, linkability and selecti
 
 * An informational Architecture that defines the terminology (e.g., Issuer, Holder, Verifier, Claims, Credentials, Presentations) and the essential communication patterns between roles, such as credential issuance, where an issuer delivers a credential to a holder, and presentation, where a holder delivers a presentation to a verifier. 
 
-* Proposed standard documents for digital credential profiles covering JWP and CWP (from JOSE) that enable digital credentials with unlinkability and selective disclosure. This work will include registering claims that are in the JWT and CWT registries to enable digital credentials to transition from one security format to another (i.e., JSON/CBOR). 
+* Proposed standard documents for digital credential profiles covering JWP and CWP (from JOSE) that enable digital credentials with selective disclosure. This work will include registering claims that are in the JWT and CWT registries to enable digital credentials to transition from one security format to another (i.e., JSON/CBOR). 
 
-* Proposed standard document defining SD-CWT, a profile of CWT inspired by SD-JWT (from OAuth) that enables digital credentials with unlinkability and selective disclosure.
+* Proposed standard document defining SD-CWT, a profile of CWT inspired by SD-JWT (from OAuth) that enables digital credentials with selective disclosure.
 
 * A proposed standard Metadata Discovery protocol for JWT, CWT, SD-JWT, SD-CWT, CWP and JWP using HTTPS/CoAP for CBOR-based digital credentials to enable the 3 roles (issuers, holders and verifiers) to discover supported capabilities, protocols and formats for keys, claims, credential types and proofs.  The design will be inspired by the OAuth "vc-jwt-issuer" metadata work (draft-ietf-oauth-sd-jwt-vc) which supports ecosystems using JSON serialization.
 
