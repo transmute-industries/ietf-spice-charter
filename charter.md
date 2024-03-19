@@ -38,6 +38,8 @@ The privacy and security considerations related to the impact of confidential co
 
 Privacy and security considerations regarding redaction, linkability and selective disclosure will be developed for proposed standards in the program of work that offer data minimization capabilities.
 
+SPICE will develop designs that follow the conceptual security model that is used in W3C VC, ISO mDocs, and similar. SPICE will not seek to extend or integrate any of those specific technologies.
+
 ## Out of Scope
 
 *	General Key discovery is out of scope for this document, there are several mechanisms for distributing or discovering key material, for example https://openid.net/specs/openid-connect-discovery-1_0.html.
