@@ -2,7 +2,7 @@
 
 Digital credentials are essential to identity, authorization, licenses, certificates, and digitization use cases that are part of modernization efforts targeting efficiency and transparency.
 
-A digital credential expresses claims, assertions, or attributes about a subject, such as their name or age, and their cryptographic keys. Some sets of claim names have already been defined by the IETF and other standards development groups (e.g., OpenID Foundation).
+A digital credential expresses assertions or attributes (claims) about a subject, and one or more of the subject's cryptographic keys. For a human subject, such claims can include their name or age, for example. Some sets of claim names have already been defined by the IETF and other standards development groups (e.g. the OpenID Foundation).
 
 Digital credentials typically involve at least three entities but can include more:
 
