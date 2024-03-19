@@ -40,7 +40,7 @@ Privacy and security considerations regarding redaction, linkability and selecti
 
 ## Out of Scope
 
-*	General Key discovery is out of scope for this document, there are several mechanisms for distributing or discovering key material, for example https://openid.net/specs/openid-connect-discovery-1_0.html.
+*	General Key discovery (i.e. not directly relevant to the Metadata discovery in the program of work below) is out of scope for this document. There are several mechanisms for distributing or discovering key material, for example https://openid.net/specs/openid-connect-discovery-1_0.html.
 
 ## Program of Work
 
@@ -50,7 +50,7 @@ Privacy and security considerations regarding redaction, linkability and selecti
 
 * Proposed standard document defining SD-CWT, a profile of CWT inspired by SD-JWT (from OAuth) that enables digital credentials with unlinkability and selective disclosure.
 
-* A proposed standard Metadata Discovery protocol for JWT, CWT, SD-JWT, SD-CWT, CWP and JWP using HTTPS/CoAP for CBOR-based digital credentials to enable the 3 roles (issuers, holders and verifiers) to discover supported capabilities, protocols and formats for keys, claims, credential types and proofs.  The design will be inspired by the OAuth "vc-jwt-issuer" metadata work (draft-ietf-oauth-sd-jwt-vc) which supports ecosystems using JSON serialization.
+* A proposed standard Metadata Discovery protocol for JWT, CWT, SD-JWT, SD-CWT, CWP and JWP using HTTPS/CoAP for CBOR-based digital credentials to enable the 3 roles (issuers, holders and verifiers) to discover supported capabilities, protocols, keys, and formats for keys, claims, credential types and proofs.  The design will be inspired by the OAuth "vc-jwt-issuer" metadata work (draft-ietf-oauth-sd-jwt-vc) which supports ecosystems using JSON serialization.
 
 ## Milestones
 
